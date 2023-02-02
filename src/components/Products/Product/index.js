@@ -13,7 +13,7 @@ export default class Product extends React.Component {
         <p className='desc'>{description}</p>
         <div className='inner'>
           <div className='price'>{price}$</div>
-          <div role='button' className='add-to-cart' />
+          <div role='button' className='add-to-cart' onClick={() => this.props.addToCart(this.props.product)} />
         </div>
       </li>
     )
