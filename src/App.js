@@ -1,14 +1,18 @@
 import React  from 'react';
 import Header from "./components/Header";
+import Products from "./components/Products";
 import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="wrap">
-      <Header />
-      <Footer />
-    </div>
-  );
+export default class App extends React.Component{
+  render() {
+    return (
+      <div className="wrap">
+        <Header />
+        <main>
+          <Products />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 }
-
-export default App;
