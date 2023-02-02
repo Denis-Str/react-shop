@@ -29,7 +29,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="wrap">
-        <Header />
+        <Header orders={this.state.orders} />
         <main>
           <Products products={this.state.products} addToCart={this.addToCart} />
         </main>

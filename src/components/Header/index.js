@@ -1,10 +1,13 @@
 import React, {useState} from "react";
+import Order from "./Order";
 import './index.css';
 import { FaShoppingCart } from 'react-icons/fa';
 
-export default function Header() {
+export default function Header({orders}) {
   let [cartOpen, setCartOpen] = useState(false);
   const isActive = cartOpen ? 'active' : '';
+  const showOrder = () => orders.map(order => <ul><Order key={order.id} order={order} /></ul>)
+  const showIsEmpty = () => <div>Товары не выбраны</div>;
 
   return (
     <header>
@@ -17,10 +20,12 @@ export default function Header() {
         </ul>
         <div>
           <FaShoppingCart className={`cart-button ${isActive}`} onClick={() => setCartOpen(cartOpen = !cartOpen)} />
-          {cartOpen && (<div className='shop-cart'></div>)}
+          {cartOpen && (
+            orders.length > 0 ? showOrder() : showIsEmpty()
+          )}
         </div>
       </div>
-      <div className='presentation'></div>
+      <div className='presentation' />
     </header>
   )
 }
