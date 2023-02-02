@@ -1,4 +1,5 @@
 import React from "react";
+import './index.css'
 import Product from "./Product";
 import axios from "axios";
 
