@@ -1,4 +1,6 @@
-* {
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,16 +15,19 @@ body {
   color: #222;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .wrap {
   width: 1280px;
   max-width: 95%;
   margin: 50px auto;
 }
 
-/*header .presentation {*/
-/*  margin: 50px 0;*/
-/*  background: url('./static/images/presentation.jpg');*/
-/*  width: 100%;*/
-/*  height: 500px;*/
-/*}*/
+header .presentation {
+  background: url('./static/images/presentation.jpg');
+}
 

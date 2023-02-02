@@ -3,9 +3,63 @@ header .logo {
     font-weight: 600;
 }
 
+header .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+header .nav {
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+header li:hover {
+    opacity: 0.5;
+}
+
+header li:not(:last-child) {
+    margin-right: 15px;
+}
+
 header .presentation {
+    position: relative;
     margin: 50px 0;
-    background: url('./src/static/images/presentation.jpg');
     width: 100%;
     height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #bcbcbc;
+}
+
+header .presentation:after {
+    content: "Личшие товары для дома";
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+header .presentation:before {
+    content: "по низким ценам";
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+
+header nav {
+    display: flex;
 }
