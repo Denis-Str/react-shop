@@ -1,0 +1,11 @@
+header .logo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header .presentation {
+    margin: 50px 0;
+    background: url('./src/static/images/presentation.jpg');
+    width: 100%;
+    height: 500px;
+}
