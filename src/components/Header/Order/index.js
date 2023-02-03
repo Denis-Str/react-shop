@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css';
+import { FaTrash } from 'react-icons/fa';
 
 export default function Order({order, deleteFromCart}) {
   const {title, image, price, id} = order;
@@ -12,7 +13,7 @@ export default function Order({order, deleteFromCart}) {
        <div className='title'>{title}</div>
        <div className='price'>{price}$</div>
      </div>
-     <div role='button' className='delete-from-cart' onClick={() => deleteFromCart(id)} />
+     <FaTrash className='delete-from-cart' onClick={() => deleteFromCart(id)} />
    </li>
   )
 }

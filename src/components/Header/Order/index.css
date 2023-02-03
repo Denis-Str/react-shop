@@ -36,12 +36,8 @@
 }
 
 .order-item .delete-from-cart {
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    display:inline-block;
-    background: linear-gradient(#fff,#fff), linear-gradient(#fff,#fff), red;
-    background-position: center;
-    background-size: 50% 2px,2px 50%;
-    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    color: red;
+    justify-self: end;
 }

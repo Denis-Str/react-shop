@@ -27,8 +27,8 @@ export default class App extends React.Component {
     const notInCard = !(this.state.orders.find(({id}) => id === product.id))
     if (notInCard) this.setState({orders: [...this.state.orders, product]});
   }
-  deleteFromCart(id) {
-    console.log(id)
+  deleteFromCart(orderID) {
+    this.setState({orders: this.state.orders.filter(({id}) => id !== orderID)})
   }
 
   render() {

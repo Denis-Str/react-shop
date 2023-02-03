@@ -11,7 +11,7 @@ export default function Header({orders, deleteFromCart}) {
   const totalPrice = orders.reduce((acc, {price}) => { return acc + price; }, 0);
   const showOrder = () => (
     <div className='shop-cart'>
-      <div className='total-price'>Общая стоимость: {totalPrice}$</div>
+      <div className='total-price'>Общая стоимость: {Math.round(totalPrice)}$</div>
       <ul className='order-list'>{order}</ul>
     </div>
   )
