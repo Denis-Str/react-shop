@@ -31,3 +31,7 @@ header .presentation {
   background: url('./static/images/presentation.jpg');
 }
 
+.categories {
+  margin-bottom: 16px;
+}
+

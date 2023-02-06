@@ -1,0 +1,17 @@
+.category {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.category:not(:last-child) {
+    margin-right: 16px;
+}
+
+.category._active {
+    background-color: blue;
+    color: white;
+    border-color: transparent;
+}
